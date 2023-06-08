@@ -1,0 +1,26 @@
+QUERY:
+      FACTORIAL OF A NUMBER
+-----------------------------------------------------------------
+
+PL/SQL BLOCK:
+
+declare 
+    i int;
+    n int;
+    fact int:=1;
+begin
+    n:=&n;
+    for i in 1..n
+    loop
+      fact:=fact*i;
+    end loop;
+    dbms_output.put_line('the factorial of '||n||' is '||fact);
+end;
+/
+OUTPUT:
+----------------------------------------------------------------------------
+Enter value for n: 5
+old   6:     n:=&n;
+new   6:     n:=5;
+the factorial of 5 is 120
+-----------------------------------------------------------------------------------
